@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Ananya Ghosh Developer Portfolio - Clean & Refined Dark Glassmorphism Theme
+   Ananya Ghosh Developer Portfolio - Human-Crafted Obsidian Glass Theme
    ========================================================================== */
 
 :root {
@@ -56,6 +56,12 @@ body {
   position: relative;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Accessibility Focus Outline */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
 }
 
 #particle-canvas {
@@ -1018,7 +1024,7 @@ section {
   color: var(--text-dim);
 }
 
-/* Projects Showcase - Polished CTAs */
+/* Projects Showcase - Structured Problem/Build/Role Breakdown */
 .projects-grid {
   display: flex;
   flex-direction: column;
@@ -1096,21 +1102,30 @@ section {
 
 .project-num {
   font-family: var(--font-code);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--accent-primary);
   margin-bottom: 6px;
 }
 
 .project-title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 1.48rem;
+  margin-bottom: 12px;
 }
 
-.project-desc {
+/* Structured Project Breakdown (Problem, Build, Role) */
+.project-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.88rem;
   color: var(--text-muted);
-  font-size: 0.92rem;
+  line-height: 1.55;
   margin-bottom: 20px;
-  line-height: 1.62;
+}
+
+.project-breakdown strong {
+  color: var(--text-main);
+  font-weight: 700;
 }
 
 .project-tech-tags {
@@ -1399,7 +1414,7 @@ section {
   border-color: var(--accent-primary);
 }
 
-/* Comprehensive Responsive Breakpoints */
+/* Responsive Breakpoints */
 @media (max-width: 1024px) {
   section { padding: 75px 5%; }
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }

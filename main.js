@@ -1,4 +1,4 @@
-// Ananya Ghosh Portfolio Interactivity & Validation Script
+// Ananya Ghosh Portfolio Interactivity & Form Script
 
 document.addEventListener('DOMContentLoaded', () => {
   // Mobile Navigation Drawer Toggle
@@ -8,14 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (menuToggleBtn && mobileDrawer) {
     menuToggleBtn.addEventListener('click', () => {
-      mobileDrawer.classList.toggle('active');
-      menuToggleBtn.textContent = mobileDrawer.classList.contains('active') ? '✕' : '☰';
+      const isActive = mobileDrawer.classList.toggle('active');
+      menuToggleBtn.textContent = isActive ? '✕' : '☰';
+      menuToggleBtn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
     });
 
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
         mobileDrawer.classList.remove('active');
         menuToggleBtn.textContent = '☰';
+        menuToggleBtn.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -63,14 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Role Typewriter Switcher
+  // Typewriter Role Switcher (Clean Natural Developer Roles)
   const typingText = document.getElementById('typing-text');
   if (typingText) {
     const roles = [
-      'Full Stack Web Systems',
-      'Experienced Graphic Design',
-      'Handshake AI Workflows',
-      'Data Science Solutions'
+      'web applications',
+      'full-stack systems',
+      'responsive interfaces',
+      'data-driven tools'
     ];
     let roleIndex = 0;
     let charIndex = 0;
@@ -86,12 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         typingText.textContent = currentRole.substring(0, charIndex + 1);
         charIndex++;
-        typingSpeed = 100;
+        typingSpeed = 95;
       }
 
       if (!isDeleting && charIndex === currentRole.length) {
         isDeleting = true;
-        typingSpeed = 2200; // Pause
+        typingSpeed = 2000;
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         roleIndex = (roleIndex + 1) % roles.length;
@@ -110,8 +112,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   tabButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      tabButtons.forEach(b => b.classList.remove('active'));
+      tabButtons.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
 
       const filter = btn.getAttribute('data-filter');
 
@@ -129,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Lightbox Zoom Modal for Mobile & Desktop Screenshots
+  // Lightbox Zoom Modal
   const modal = document.getElementById('lightbox-modal');
   const modalImg = document.getElementById('modal-img');
   const modalClose = document.getElementById('modal-close');
@@ -157,6 +163,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Keyboard Escape Key to Close Lightbox Modal
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+      modal.classList.remove('active');
+    }
+  });
+
   // Scroll Reveal Intersection Observer
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -171,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
     revealObserver.observe(el);
   });
 
-  // Requirement 3: Contact Form Client-side Validation & Toast Feedback
+  // Contact Form Client-side Validation & Toast Feedback
   const contactForm = document.getElementById('contact-form');
   const toastFeedback = document.getElementById('toast-feedback');
 
@@ -180,7 +193,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailInput = document.getElementById('email');
     const messageInput = document.getElementById('message');
 
-    // Email Regular Expression Validation
     const isValidEmail = (email) => {
       const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return re.test(String(email).toLowerCase());
@@ -201,7 +213,6 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // Clear previous field highlight states
       [nameInput, emailInput, messageInput].forEach(field => {
         if (field) field.classList.remove('invalid-field');
       });
@@ -210,7 +221,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const emailVal = emailInput ? emailInput.value.trim() : '';
       const messageVal = messageInput ? messageInput.value.trim() : '';
 
-      // Validation Checks
       if (!nameVal) {
         if (nameInput) nameInput.classList.add('invalid-field');
         showToast('❌ Please enter your name.', 'error');
@@ -220,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!emailVal || !isValidEmail(emailVal)) {
         if (emailInput) emailInput.classList.add('invalid-field');
-        showToast('❌ Please enter a valid email address (e.g. alex@example.com).', 'error');
+        showToast('❌ Please enter a valid email address.', 'error');
         emailInput.focus();
         return;
       }
@@ -232,14 +242,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Success Feedback & Direct Mailto Fallback Setup
-      const mailtoSubject = encodeURIComponent(`Portfolio Contact from ${nameVal}`);
+      const mailtoSubject = encodeURIComponent(`Portfolio Message from ${nameVal}`);
       const mailtoBody = encodeURIComponent(`Name: ${nameVal}\nEmail: ${emailVal}\n\nMessage:\n${messageVal}`);
       const mailtoUrl = `mailto:07ananyaghosg07@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
 
-      showToast(`✓ Thank you ${nameVal}! Your message has been prepared. Opening email app...`, 'success');
+      showToast(`✓ Thank you ${nameVal}! Your message is prepared. Opening email app...`, 'success');
 
-      // Trigger mailto fallback so user's native email client opens smoothly
       setTimeout(() => {
         window.location.href = mailtoUrl;
       }, 1000);

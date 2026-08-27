@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>Ananya Ghosh — Full Stack Developer & Graphic Designer</title>
-  <meta name="description" content="Portfolio of Ananya Ghosh. Full Stack Developer, Graphic Designer, Handshake AI experience, B.Tech CSE (Data Science) student at FIEM, and Sarada Vidyapith HS alumnus.">
+  <meta name="description" content="Personal portfolio of Ananya Ghosh. Full Stack Developer, Graphic Designer, Handshake AI Technical Contributor, and 2nd-year B.Tech CSE (Data Science) student at FIEM.">
   
   <!-- OpenGraph Meta Tags -->
   <meta property="og:title" content="Ananya Ghosh | Full Stack Developer & Graphic Designer">
-  <meta property="og:description" content="Building web applications with clean code, modern visual design, Handshake AI experience, and robust backend infrastructure.">
+  <meta property="og:description" content="Full Stack Developer and Graphic Designer with technical experience at Handshake AI and a background in Computer Science & Data Science.">
   <meta property="og:type" content="website">
 
   <!-- Google Fonts -->
@@ -21,13 +21,13 @@
 </head>
 <body class="cinematic-theme">
 
-  <!-- Ambient Cursor Spotlight & Glow -->
-  <div class="spotlight-follower" id="spotlight"></div>
-  <div class="ambient-glow glow-top-right"></div>
-  <div class="ambient-glow glow-bottom-left"></div>
+  <!-- Ambient Cursor Spotlight (Desktop only) -->
+  <div class="spotlight-follower" id="spotlight" aria-hidden="true"></div>
+  <div class="ambient-glow glow-top-right" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom-left" aria-hidden="true"></div>
 
   <!-- Mobile Drawer Menu -->
-  <div class="mobile-nav-drawer" id="mobile-drawer">
+  <div class="mobile-nav-drawer" id="mobile-drawer" role="navigation" aria-label="Mobile Navigation">
     <a href="#about" class="mobile-nav-link">About</a>
     <a href="#education" class="mobile-nav-link">Experience</a>
     <a href="#skills" class="mobile-nav-link">Skills</a>
@@ -37,7 +37,7 @@
   </div>
 
   <!-- Navigation Bar -->
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
     <a href="#" class="logo">
       ANANYA<span class="accent-text">.GHOSH</span>
       <span class="logo-dot"></span>
@@ -63,7 +63,7 @@
 
   <!-- Hero Section -->
   <section class="hero-section cinematic-hero" id="hero">
-    <div class="watermark-bg" id="hero-watermark">ANANYA GHOSH</div>
+    <div class="watermark-bg" id="hero-watermark" aria-hidden="true">ANANYA GHOSH</div>
     
     <div class="hero-grid">
       <div class="hero-content">
@@ -78,27 +78,27 @@
         </h1>
         
         <h2 class="hero-subtitle-typewriter">
-          I build <span id="typing-text" class="typing-container">Full Stack Developer</span>
+          I build <span id="typing-text" class="typing-container">web applications</span>
         </h2>
         
         <p class="hero-description">
-          Full-stack web developer and experienced graphic designer with hands-on technical experience at <strong>Handshake AI</strong>. Currently pursuing a B.Tech in Computer Science & Engineering (Data Science) at FIEM.
+          I build clean, responsive web applications and design intuitive digital products. With technical experience at <strong>Handshake AI</strong> and a background in graphic design, I focus on writing maintainable code with strong visual presentation. Currently studying B.Tech CSE (Data Science) at FIEM.
         </p>
         
         <div class="hero-cta-group">
           <a href="#projects" class="btn btn-primary">
-            <span>View Projects</span>
+            <span>Explore My Work</span>
             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a href="#contact" class="btn btn-secondary">
-            <span>Contact Me</span>
+            <span>Get in Touch</span>
           </a>
         </div>
 
         <div class="hero-stats-strip reveal-scroll">
           <div class="stat-pill">
-            <img src="assets/handshake_logo.webp" alt="Handshake AI Logo" class="handshake-logo-img sm-logo">
-            <span class="stat-lbl">Handshake AI Experience</span>
+            <img src="assets/handshake_logo.webp" alt="Handshake AI" class="handshake-logo-img sm-logo">
+            <span class="stat-lbl">Handshake AI Contributor</span>
           </div>
           <div class="stat-pill">
             <span class="stat-num">2nd Yr</span>
@@ -110,7 +110,7 @@
           </div>
           <div class="stat-pill">
             <span class="stat-num">🏫</span>
-            <span class="stat-lbl">Sarada Vidyapith HS (PCM+CS)</span>
+            <span class="stat-lbl">Sarada Vidyapith HS</span>
           </div>
         </div>
       </div>
@@ -118,10 +118,10 @@
       <!-- Hero Showcase Portrait -->
       <div class="hero-portrait-card cinematic-3d-card reveal-scroll" id="portrait-card">
         <div class="floating-badge badge-top-left">
-          <img src="assets/handshake_logo.webp" alt="Handshake AI Logo" class="handshake-logo-img">
+          <img src="assets/handshake_logo.webp" alt="Handshake AI" class="handshake-logo-img">
           <div>
             <div class="badge-text-title">Handshake AI</div>
-            <div class="badge-text-sub">Technical Contributor</div>
+            <div class="badge-text-sub">AI & Technical Contributor</div>
           </div>
         </div>
 
@@ -129,12 +129,12 @@
           <span class="badge-icon">🎨</span>
           <div>
             <div class="badge-text-title">Graphic Designer</div>
-            <div class="badge-text-sub">Visual Identity & UI</div>
+            <div class="badge-text-sub">UI & Visual Branding</div>
           </div>
         </div>
 
         <div class="portrait-wrapper cinematic-frame">
-          <img src="assets/ananya_hero.jpg" alt="Ananya Ghosh - Developer & Graphic Designer" class="portrait-img cinematic-portrait">
+          <img src="assets/ananya_hero.jpg" alt="Ananya Ghosh - Full Stack Developer & Graphic Designer" class="portrait-img cinematic-portrait">
           <div class="portrait-overlay">
             <div class="portrait-tag-row">
               <span class="p-badge">FULL STACK DEVELOPER</span>
@@ -147,7 +147,7 @@
     </div>
 
     <!-- Scroll Indicator -->
-    <div class="scroll-cue">
+    <div class="scroll-cue" aria-hidden="true">
       <div class="mouse-icon"><div class="mouse-wheel"></div></div>
       <span>SCROLL TO EXPLORE</span>
       <div class="scroll-spark-line"></div>
@@ -156,42 +156,42 @@
 
   <!-- About Me Section -->
   <section id="about">
-    <div class="watermark-bg">ABOUT</div>
+    <div class="watermark-bg" aria-hidden="true">ABOUT</div>
     <div class="section-header reveal-scroll">
       <div class="section-tag">// 01. ABOUT ME</div>
-      <h2 class="section-title">Full Stack Developer & Graphic Designer</h2>
+      <h2 class="section-title">My Background & Focus</h2>
     </div>
 
     <div class="about-grid">
       <div class="glass-panel about-text-content reveal-scroll">
         <p style="margin-bottom: 14px;">
-          I am a 2nd-year B.Tech student in <strong>Computer Science & Engineering (Data Science)</strong> at Future Institute of Engineering and Management (FIEM).
+          My journey started in graphic design, which taught me to care about layout, typography, visual hierarchy, and user experience. As I progressed into Computer Science, I wanted to build what happens behind the interfaces as well.
         </p>
         <p style="margin-bottom: 14px;">
-          Alongside web development, I have technical experience working on the <strong>Handshake AI</strong> platform, evaluating AI model outputs, datasets, and prompt structures.
+          Currently, I am a 2nd-year B.Tech student in <strong>Computer Science & Engineering (Data Science)</strong> at Future Institute of Engineering and Management (FIEM).
         </p>
         <p style="margin-bottom: 16px;">
-          With a strong background in <strong>Graphic Design</strong>, I bring visual consistency, layout precision, and clean UI architecture to full-stack applications. I completed my high school education at <strong>SARADA VIDYAPITH HS</strong> with PCM + CS.
+          Alongside my studies, I work as a technical contributor on <strong>Handshake AI</strong>, evaluating AI model outputs, prompt efficiency, and data quality. I completed my schooling at <strong>SARADA VIDYAPITH HS</strong> focusing on Physics, Chemistry, Mathematics, and Computer Science.
         </p>
 
         <ul class="about-bullets-list">
-          <li><span class="bullet-icon">✓</span> <strong>Frontend & Backend:</strong> Responsive React UIs, Node.js/Express REST APIs, and SQL/MongoDB databases.</li>
-          <li><span class="bullet-icon">✓</span> <strong>AI & Data Workflows:</strong> Hands-on experience with AI model evaluation and prompt testing at Handshake AI.</li>
-          <li><span class="bullet-icon">✓</span> <strong>Visual Design:</strong> Creating brand identity assets, interface wireframes, and vector illustrations.</li>
+          <li><span class="bullet-icon">✓</span> <strong>Frontend Development:</strong> Building responsive React interfaces with HTML5, CSS3, and JavaScript (ES6+).</li>
+          <li><span class="bullet-icon">✓</span> <strong>Backend & Data:</strong> Node.js, Express APIs, SQL, MongoDB database modeling, and Data Science fundamentals.</li>
+          <li><span class="bullet-icon">✓</span> <strong>Visual Design:</strong> Brand identity guidelines, UI wireframing, and vector graphics.</li>
         </ul>
       </div>
 
       <!-- Feature Card -->
       <div class="glass-panel yoga-synergy-card reveal-scroll" style="display: flex; flex-direction: column; justify-content: space-between;">
         <div>
-          <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Design & Engineering Approach</h3>
+          <h3 style="font-size: 1.2rem; margin-bottom: 8px;">How I Work</h3>
           <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 16px;">
-            Combining disciplined software engineering with strong visual design principles to build fast, accessible, and user-centric web applications:
+            I believe good web products come from balancing visual design with clean engineering discipline:
           </p>
           <ul class="about-bullets-list" style="margin-top: 0;">
-            <li><span class="bullet-icon">✓</span> <strong>Clean Code Base:</strong> Modular component structures and structured database schemas.</li>
-            <li><span class="bullet-icon">✓</span> <strong>Design Systems:</strong> Consistent typography, color palettes, and responsive tokens.</li>
-            <li><span class="bullet-icon">✓</span> <strong>Problem Solving:</strong> Analytical approach to debugging, API design, and performance optimization.</li>
+            <li><span class="bullet-icon">✓</span> <strong>Structure First:</strong> Plan component architecture and database schemas before writing code.</li>
+            <li><span class="bullet-icon">✓</span> <strong>Visual Precision:</strong> Ensure layout spacing, typography, and contrast feel balanced across screen sizes.</li>
+            <li><span class="bullet-icon">✓</span> <strong>Continuous Learning:</strong> Regularly building hands-on projects to deepen data science and web engineering skills.</li>
           </ul>
         </div>
 
@@ -207,11 +207,11 @@
 
   <!-- Work Experience & Academics Section -->
   <section id="education">
-    <div class="watermark-bg">EXPERIENCE</div>
+    <div class="watermark-bg" aria-hidden="true">EXPERIENCE</div>
     <div class="section-header reveal-scroll">
       <div class="section-tag">// 02. EXPERIENCE & ACADEMICS</div>
-      <h2 class="section-title">Work Experience & Education</h2>
-      <p class="section-subtitle">Practical technical experience and academic foundation in Computer Science & Data Science.</p>
+      <h2 class="section-title">Experience & Education</h2>
+      <p class="section-subtitle">Practical work experience, ongoing technical education, and academic foundation.</p>
     </div>
 
     <div class="education-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
@@ -225,7 +225,7 @@
           <h3 style="font-size: 1.2rem; margin-bottom: 4px;">Handshake AI</h3>
           <div style="font-weight: 600; color: var(--text-main); margin-bottom: 6px; font-size: 0.9rem;">AI Data Specialist & Technical Contributor</div>
           <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.55;">
-            Contributed to Handshake AI tasks focusing on model response evaluation, prompt structure refinement, dataset validation, and quality benchmarks.
+            Evaluating AI model outputs, prompt structures, dataset accuracy, and technical quality benchmarks across data annotation tasks.
           </p>
         </div>
       </div>
@@ -238,7 +238,7 @@
           <h3 style="font-size: 1.2rem; margin-bottom: 4px;">B.Tech in CSE (Data Science)</h3>
           <div style="font-weight: 600; color: var(--text-main); margin-bottom: 6px; font-size: 0.9rem;">FIEM (Future Institute of Engineering and Management)</div>
           <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.55;">
-            Coursework in Data Structures, Database Systems, Web Development, Object-Oriented Programming, and Data Analytics.
+            Studying Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Web Development, and Data Science.
           </p>
         </div>
       </div>
@@ -251,29 +251,29 @@
           <h3 style="font-size: 1.2rem; margin-bottom: 4px;">SARADA VIDYAPITH HS</h3>
           <div style="font-weight: 600; color: var(--text-main); margin-bottom: 6px; font-size: 0.9rem;">Stream: PCM + Computer Science</div>
           <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.55;">
-            Completed Higher Secondary with focus on Mathematics, Physics, Chemistry, and Computer Science fundamentals.
+            Completed Higher Secondary education with focus on Physics, Chemistry, Mathematics, and Computer Science fundamentals.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Technical Skills & Tooling Section -->
+  <!-- Technical Skills Section -->
   <section id="skills">
-    <div class="watermark-bg">SKILLS</div>
+    <div class="watermark-bg" aria-hidden="true">SKILLS</div>
     <div class="section-header reveal-scroll">
       <div class="section-tag">// 03. TECHNICAL SKILLS</div>
-      <h2 class="section-title">Technical Expertise & Tooling</h2>
-      <p class="section-subtitle">Core technologies, frameworks, and design software I work with regularly.</p>
+      <h2 class="section-title">Technologies & Tools</h2>
+      <p class="section-subtitle">Core technologies and tools I work with across frontend, backend, database, and design.</p>
     </div>
 
     <!-- Filter Navigation Tabs -->
-    <div class="skills-tab-nav reveal-scroll">
-      <button class="skills-tab-btn active" data-filter="all">All Specialties</button>
-      <button class="skills-tab-btn" data-filter="design">Design & UI/UX</button>
-      <button class="skills-tab-btn" data-filter="frontend">Frontend</button>
-      <button class="skills-tab-btn" data-filter="backend">Backend & DB</button>
-      <button class="skills-tab-btn" data-filter="cloud">Cloud & Tools</button>
+    <div class="skills-tab-nav reveal-scroll" role="tablist">
+      <button class="skills-tab-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="skills-tab-btn" data-filter="frontend" role="tab" aria-selected="false">Frontend</button>
+      <button class="skills-tab-btn" data-filter="backend" role="tab" aria-selected="false">Backend & DB</button>
+      <button class="skills-tab-btn" data-filter="cloud" role="tab" aria-selected="false">Cloud & AI</button>
+      <button class="skills-tab-btn" data-filter="design" role="tab" aria-selected="false">Design</button>
     </div>
 
     <div class="skills-grid">
@@ -287,26 +287,26 @@
         </div>
         <div class="skill-title-group">
           <h4>Handshake AI Platform</h4>
-          <p class="skill-meta-desc">Model evaluation, prompt engineering, data annotation, and quality assurance for AI systems.</p>
+          <p class="skill-meta-desc">AI model response evaluation, prompt structure testing, data annotation, and quality assurance.</p>
         </div>
         <div class="skill-tags-row">
           <span class="skill-tag-pill">Handshake AI</span>
           <span class="skill-tag-pill">Prompt Testing</span>
-          <span class="skill-tag-pill">AI Evaluation</span>
+          <span class="skill-tag-pill">Model QA</span>
         </div>
       </div>
 
-      <!-- Graphic Design & Visual Branding -->
+      <!-- Graphic Design -->
       <div class="human-skill-card reveal-scroll" data-category="design">
         <div class="skill-card-top">
           <div class="skill-brand-icon">
             <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c3.31 0 6-2.69 6-6 0-4.96-4.49-9-10-9zm-5.5 11c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
           </div>
-          <span class="skill-level-badge primary-badge">Core Focus</span>
+          <span class="skill-level-badge primary-badge">Core Experience</span>
         </div>
         <div class="skill-title-group">
           <h4>Graphic Design & Branding</h4>
-          <p class="skill-meta-desc">Creating brand assets, logo vectors, layout designs, and visual marketing materials.</p>
+          <p class="skill-meta-desc">Brand identity guidelines, logo vectors, layout designs, and visual marketing assets.</p>
         </div>
         <div class="skill-tags-row">
           <span class="skill-tag-pill">Brand Identity</span>
@@ -315,7 +315,7 @@
         </div>
       </div>
 
-      <!-- UI/UX Architecture -->
+      <!-- UI/UX Design -->
       <div class="human-skill-card reveal-scroll" data-category="design">
         <div class="skill-card-top">
           <div class="skill-brand-icon">
@@ -324,17 +324,17 @@
           <span class="skill-level-badge primary-badge">Experienced</span>
         </div>
         <div class="skill-title-group">
-          <h4>UI/UX Design & Layouts</h4>
-          <p class="skill-meta-desc">Wireframing, user flows, responsive layouts, design tokens, and modern glassmorphism aesthetics.</p>
+          <h4>UI/UX Layouts</h4>
+          <p class="skill-meta-desc">Wireframing, user flows, responsive layouts, design tokens, and interface hierarchy.</p>
         </div>
         <div class="skill-tags-row">
           <span class="skill-tag-pill">Wireframing</span>
           <span class="skill-tag-pill">Design Tokens</span>
-          <span class="skill-tag-pill">Responsive UI</span>
+          <span class="skill-tag-pill">User Flows</span>
         </div>
       </div>
 
-      <!-- HTML5 & Modern CSS3 -->
+      <!-- HTML5 & CSS3 -->
       <div class="human-skill-card reveal-scroll" data-category="frontend">
         <div class="skill-card-top">
           <div class="skill-brand-icon">
@@ -344,7 +344,7 @@
         </div>
         <div class="skill-title-group">
           <h4>HTML5 & CSS3</h4>
-          <p class="skill-meta-desc">Semantic HTML5 markup, CSS Grid, Flexbox, keyframe animations, and custom styling systems.</p>
+          <p class="skill-meta-desc">Semantic HTML5 markup, CSS Grid, Flexbox, custom animations, and responsive breakpoints.</p>
         </div>
         <div class="skill-tags-row">
           <span class="skill-tag-pill">CSS Grid</span>
@@ -353,7 +353,7 @@
         </div>
       </div>
 
-      <!-- JavaScript (ES6+) -->
+      <!-- JavaScript -->
       <div class="human-skill-card reveal-scroll" data-category="frontend">
         <div class="skill-card-top">
           <div class="skill-brand-icon">
@@ -363,7 +363,7 @@
         </div>
         <div class="skill-title-group">
           <h4>JavaScript (ES6+)</h4>
-          <p class="skill-meta-desc">Async/await, DOM manipulation, promises, ES Modules, and interactive client-side logic.</p>
+          <p class="skill-meta-desc">Async/await, DOM APIs, promises, ES Modules, and interactive client-side application logic.</p>
         </div>
         <div class="skill-tags-row">
           <span class="skill-tag-pill">Async/Await</span>
@@ -378,16 +378,16 @@
           <div class="skill-brand-icon">
             <svg viewBox="0 0 24 24"><path d="M12 9a3 3 0 100 6 3 3 0 000-6zm0-7C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
           </div>
-          <span class="skill-level-badge primary-badge">Frontend Stack</span>
+          <span class="skill-level-badge primary-badge">Frontend Framework</span>
         </div>
         <div class="skill-title-group">
           <h4>React.js</h4>
-          <p class="skill-meta-desc">Component-driven architecture, custom hooks, state management, and modern SPA development.</p>
+          <p class="skill-meta-desc">Component-driven UI architecture, custom hooks, state management, and Vite development tooling.</p>
         </div>
         <div class="skill-tags-row">
           <span class="skill-tag-pill">React Hooks</span>
           <span class="skill-tag-pill">Vite</span>
-          <span class="skill-tag-pill">Components</span>
+          <span class="skill-tag-pill">SPA Components</span>
         </div>
       </div>
 
@@ -401,11 +401,11 @@
         </div>
         <div class="skill-title-group">
           <h4>Tailwind CSS</h4>
-          <p class="skill-meta-desc">Utility-first styling, custom theme configurations, and rapid responsive interface building.</p>
+          <p class="skill-meta-desc">Utility-first styling, responsive breakpoint systems, and custom theme configurations.</p>
         </div>
         <div class="skill-tags-row">
           <span class="skill-tag-pill">Utility Styling</span>
-          <span class="skill-tag-pill">Responsive</span>
+          <span class="skill-tag-pill">Responsive Design</span>
         </div>
       </div>
 
@@ -415,11 +415,11 @@
           <div class="skill-brand-icon">
             <svg viewBox="0 0 24 24"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5v7l-7 3.5-7-3.5v-7l7-3.5z"/></svg>
           </div>
-          <span class="skill-level-badge primary-badge">Backend Stack</span>
+          <span class="skill-level-badge primary-badge">Backend Framework</span>
         </div>
         <div class="skill-title-group">
           <h4>Node.js & Express</h4>
-          <p class="skill-meta-desc">REST API development, middleware integration, HTTP routing, and server-side business logic.</p>
+          <p class="skill-meta-desc">REST API development, Express routing middleware, controllers, and JSON backend handling.</p>
         </div>
         <div class="skill-tags-row">
           <span class="skill-tag-pill">REST APIs</span>
@@ -428,26 +428,26 @@
         </div>
       </div>
 
-      <!-- Databases (MongoDB & SQL) -->
+      <!-- MongoDB & SQL -->
       <div class="human-skill-card reveal-scroll" data-category="backend">
         <div class="skill-card-top">
           <div class="skill-brand-icon">
             <svg viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4zm0 2c3.87 0 6 1.3 6 2s-2.13 2-6 2-6-1.3-6-2 2.13-2 6-2zm6 7c0 .7-2.13 2-6 2s-6-1.3-6-2V9.75C7.45 10.5 9.58 11 12 11s4.55-.5 6-1.25V12zm0 5c0 .7-2.13 2-6 2s-6-1.3-6-2v-2.25c1.45.75 3.58 1.25 6 1.25s4.55-.5 6-1.25V17z"/></svg>
           </div>
-          <span class="skill-level-badge">Data Systems</span>
+          <span class="skill-level-badge">Databases</span>
         </div>
         <div class="skill-title-group">
           <h4>MongoDB & SQL</h4>
-          <p class="skill-meta-desc">Relational and document database design, query optimization, Mongoose schemas, and data modeling.</p>
+          <p class="skill-meta-desc">Relational SQL queries, MongoDB document schemas, Mongoose models, and data aggregation.</p>
         </div>
         <div class="skill-tags-row">
           <span class="skill-tag-pill">Mongoose ORM</span>
-          <span class="skill-tag-pill">SQL Relational</span>
+          <span class="skill-tag-pill">Relational SQL</span>
           <span class="skill-tag-pill">Data Modeling</span>
         </div>
       </div>
 
-      <!-- Cloud & Version Control (GCP & Git) -->
+      <!-- Cloud & Version Control -->
       <div class="human-skill-card reveal-scroll" data-category="cloud">
         <div class="skill-card-top">
           <div class="skill-brand-icon">
@@ -457,7 +457,7 @@
         </div>
         <div class="skill-title-group">
           <h4>Google Cloud & Git</h4>
-          <p class="skill-meta-desc">GCP Study Jams certified, cloud hosting, Git version control, deployment workflows, and Vercel.</p>
+          <p class="skill-meta-desc">GCP Study Jams certified, cloud hosting workflows, Git version control, GitHub, and Vercel hosting.</p>
         </div>
         <div class="skill-tags-row">
           <span class="skill-tag-pill">GCP Certified</span>
@@ -470,15 +470,15 @@
 
   <!-- Featured Projects Section -->
   <section id="projects">
-    <div class="watermark-bg">PROJECTS</div>
+    <div class="watermark-bg" aria-hidden="true">PROJECTS</div>
     <div class="section-header reveal-scroll">
       <div class="section-tag">// 04. FEATURED PROJECTS</div>
       <h2 class="section-title">Built Web Applications</h2>
-      <p class="section-subtitle">Recent web development projects demonstrating end-to-end frontend and backend architecture.</p>
+      <p class="section-subtitle">Real-world applications focusing on product problem solving, technical architecture, and UI/UX design.</p>
     </div>
 
     <div class="projects-grid">
-      <!-- Project 01: NextStep -->
+      <!-- Project 01: NextStep (Product & UI Focus) -->
       <div class="glass-panel project-card reveal-scroll">
         <div class="project-media-wrap" data-zoom-src="assets/nextstep_official.jpg">
           <img src="assets/nextstep_official.jpg" alt="NextStep Platform Screenshot" class="project-img">
@@ -487,24 +487,28 @@
           </div>
         </div>
         <div class="project-content">
-          <div class="project-num">PROJECT 01 // LIVE PRODUCTION</div>
+          <div class="project-num">PROJECT 01 // PRODUCT & UI/UX FOCUS</div>
           <h3 class="project-title">NextStep — Career Pathway Platform</h3>
-          <p class="project-desc">
-            A career navigation web application designed to help students explore career paths, university options, roadmap resources, and academic performance tracking through an intuitive interface.
-          </p>
+          
+          <div class="project-breakdown">
+            <p><strong>Problem:</strong> Students often struggle to navigate complex career choices, college requirements, and roadmaps in one clear place.</p>
+            <p><strong>Build:</strong> A full-stack web application featuring structured career roadmaps, top university databases, and GPA analytics.</p>
+            <p><strong>Role:</strong> Designed the complete UI layout, implemented responsive React components, and handled Vercel deployment.</p>
+          </div>
+
           <div class="project-tech-tags">
             <span class="tech-tag">React.js</span>
             <span class="tech-tag">Tailwind CSS</span>
             <span class="tech-tag">JavaScript</span>
             <span class="tech-tag">Vercel Deployment</span>
           </div>
-          <!-- Prominent CTA Buttons for Live Demo & GitHub Repo -->
+
           <div class="project-links">
-            <a href="https://next-step-ivory-iota.vercel.app/" target="_blank" class="btn btn-primary">
+            <a href="https://next-step-ivory-iota.vercel.app/" target="_blank" class="btn btn-primary" rel="noopener noreferrer">
               <span>Live Demo</span>
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
             </a>
-            <a href="https://github.com/ananya21-ghosh/Portfolio" target="_blank" class="btn btn-outline">
+            <a href="https://github.com/ananya21-ghosh/Portfolio" target="_blank" class="btn btn-outline" rel="noopener noreferrer">
               <svg style="width: 16px; height: 16px; fill: currentColor;" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               <span>GitHub Repo</span>
             </a>
@@ -512,7 +516,7 @@
         </div>
       </div>
 
-      <!-- Project 02: NAZAR -->
+      <!-- Project 02: NAZAR (Architecture & Experimentation Focus) -->
       <div class="glass-panel project-card reveal-scroll">
         <div class="project-media-wrap" data-zoom-src="assets/nazar_poster.jpg">
           <img src="assets/nazar_poster.jpg" alt="NAZAR AI Cybersecurity Suite Poster" class="project-img" style="object-fit: contain; background: #000;">
@@ -521,23 +525,27 @@
           </div>
         </div>
         <div class="project-content">
-          <div class="project-num">PROJECT 02 // CYBERSECURITY SUITE</div>
+          <div class="project-num">PROJECT 02 // ARCHITECTURE & SECURITY FOCUS</div>
           <h3 class="project-title">NAZAR — AI Cybersecurity Dashboard</h3>
-          <p class="project-desc">
-            An active cybersecurity intelligence concept focusing on threat telemetry visualization, fraud detection workflows, and real-time dashboard analytics.
-          </p>
+          
+          <div class="project-breakdown">
+            <p><strong>Problem:</strong> Digital security dashboards can be overly complex and lack intuitive threat visual feedback.</p>
+            <p><strong>Build:</strong> A telemetry dashboard prototype showcasing real-time security alerts and threat data visualization.</p>
+            <p><strong>Role:</strong> Researched cybersecurity workflows, built Node.js dashboard endpoints, and created graphic poster assets.</p>
+          </div>
+
           <div class="project-tech-tags">
             <span class="tech-tag">React.js</span>
             <span class="tech-tag">Node.js</span>
             <span class="tech-tag">Express</span>
             <span class="tech-tag">Security Analytics</span>
           </div>
-          <!-- Prominent CTA Buttons for Preview & GitHub Repo -->
+
           <div class="project-links">
             <button data-zoom-src="assets/nazar_poster.jpg" class="btn btn-primary" style="cursor: pointer;">
               <span>Preview Poster</span>
             </button>
-            <a href="https://github.com/ananya21-ghosh" target="_blank" class="btn btn-outline">
+            <a href="https://github.com/ananya21-ghosh" target="_blank" class="btn btn-outline" rel="noopener noreferrer">
               <svg style="width: 16px; height: 16px; fill: currentColor;" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               <span>GitHub Repo</span>
             </a>
@@ -549,10 +557,10 @@
 
   <!-- Certifications & Process Section -->
   <section id="certifications">
-    <div class="watermark-bg">MILESTONES</div>
+    <div class="watermark-bg" aria-hidden="true">MILESTONES</div>
     <div class="section-header reveal-scroll">
       <div class="section-tag">// 05. CERTIFICATIONS & WORKFLOW</div>
-      <h2 class="section-title">Certifications & Development Process</h2>
+      <h2 class="section-title">Certifications & Workflow</h2>
     </div>
 
     <div class="cert-process-grid">
@@ -566,9 +574,9 @@
             <h4>Google Cloud Study Jams Achiever</h4>
             <div class="cert-issuer">Google Developer Group (GDG) FIEM 2025</div>
             <p style="font-size: 0.84rem; color: var(--text-muted);">
-              Hands-on experience with Google Cloud Platform, cloud security, and deployment infrastructure.
+              Completed practical labs on Google Cloud Platform infrastructure, security fundamentals, and deployment.
             </p>
-            <span style="font-size: 0.75rem; color: var(--accent-primary); font-family: var(--font-code); display: inline-block; margin-top: 5px;">🔍 Click image to view certificate</span>
+            <span style="font-size: 0.75rem; color: var(--accent-primary); font-family: var(--font-code); display: inline-block; margin-top: 5px;">🔍 Click image to zoom</span>
           </div>
         </div>
 
@@ -576,9 +584,9 @@
           <div class="skill-brand-icon" style="width: 125px; height: 90px; border-radius: var(--border-radius-sm); font-size: 1.8rem; flex-shrink: 0; background: rgba(255,46,77,0.08); border-color: rgba(255,46,77,0.3);">🎨</div>
           <div class="cert-details">
             <h4>Graphic Design & Brand Strategy</h4>
-            <div class="cert-issuer">Experienced Graphic Designer</div>
+            <div class="cert-issuer">Experienced Visual Creator</div>
             <p style="font-size: 0.84rem; color: var(--text-muted);">
-              Specializing in brand identity, user interface design, and custom graphic assets.
+              Designing visual assets, UI layouts, brand identities, and graphic elements.
             </p>
           </div>
         </div>
@@ -592,23 +600,23 @@
             <span class="workflow-step">01</span>
             <div>
               <div class="workflow-title">Requirement & Scope</div>
-              <p style="font-size: 0.8rem; color: var(--text-muted);">Analyzing feature requirements, target users, and system goals.</p>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Understanding project goals, target users, and key features.</p>
             </div>
           </div>
 
           <div class="workflow-item reveal-scroll">
             <span class="workflow-step">02</span>
             <div>
-              <div class="workflow-title">UI/UX & Wireframing</div>
-              <p style="font-size: 0.8rem; color: var(--text-muted);">Designing wireframes, design tokens, and responsive layouts.</p>
+              <div class="workflow-title">UI Wireframing</div>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Designing clean interface layouts and responsive tokens.</p>
             </div>
           </div>
 
           <div class="workflow-item reveal-scroll">
             <span class="workflow-step">03</span>
             <div>
-              <div class="workflow-title">Full Stack Coding</div>
-              <p style="font-size: 0.8rem; color: var(--text-muted);">Developing React frontend components and Node.js REST APIs.</p>
+              <div class="workflow-title">Full-Stack Development</div>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Writing clean React code, Node.js APIs, and database schemas.</p>
             </div>
           </div>
 
@@ -616,7 +624,7 @@
             <span class="workflow-step">04</span>
             <div>
               <div class="workflow-title">Testing & Deployment</div>
-              <p style="font-size: 0.8rem; color: var(--text-muted);">Deploying code to Vercel/Cloud platforms with version control.</p>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Testing responsive viewports and deploying via Vercel/GitHub.</p>
             </div>
           </div>
         </div>
@@ -626,11 +634,11 @@
 
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
-    <div class="watermark-bg">CONTACT</div>
+    <div class="watermark-bg" aria-hidden="true">CONTACT</div>
     <div class="section-header reveal-scroll">
       <div class="section-tag">// 06. CONTACT</div>
       <h2 class="section-title">Get In Touch</h2>
-      <p class="section-subtitle">Open to full-stack engineering roles, freelance graphic design work, and project inquiries.</p>
+      <p class="section-subtitle">Open to web development roles, freelance design projects, or technical collaboration.</p>
     </div>
 
     <div class="contact-card-grid">
@@ -641,7 +649,7 @@
         </p>
 
         <div class="social-link-list">
-          <a href="https://linkedin.com/in/ananya-ghosh-172673379" target="_blank" class="social-link-item reveal-scroll">
+          <a href="https://linkedin.com/in/ananya-ghosh-172673379" target="_blank" class="social-link-item reveal-scroll" rel="noopener noreferrer">
             <span class="social-icon">💼</span>
             <div>
               <div style="font-weight: 600; font-size: 0.88rem;">LinkedIn</div>
@@ -649,7 +657,7 @@
             </div>
           </a>
 
-          <a href="https://github.com/ananya21-ghosh" target="_blank" class="social-link-item reveal-scroll">
+          <a href="https://github.com/ananya21-ghosh" target="_blank" class="social-link-item reveal-scroll" rel="noopener noreferrer">
             <span class="social-icon">🐙</span>
             <div>
               <div style="font-weight: 600; font-size: 0.88rem;">GitHub</div>
@@ -657,7 +665,7 @@
             </div>
           </a>
 
-          <a href="https://www.instagram.com/ananyaghosh_007?igsi=YWUxb3QxdmJ0ejl1" target="_blank" class="social-link-item reveal-scroll">
+          <a href="https://www.instagram.com/ananyaghosh_007?igsi=YWUxb3QxdmJ0ejl1" target="_blank" class="social-link-item reveal-scroll" rel="noopener noreferrer">
             <span class="social-icon">📸</span>
             <div>
               <div style="font-weight: 600; font-size: 0.88rem;">Instagram</div>
@@ -699,7 +707,6 @@
             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
           
-          <!-- Client-side Validation Toast Notification Box -->
           <div id="toast-feedback" class="toast-feedback" role="alert"></div>
         </form>
       </div>
@@ -715,9 +722,9 @@
   </footer>
 
   <!-- Lightbox Modal -->
-  <div class="modal-overlay" id="lightbox-modal">
+  <div class="modal-overlay" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Expanded Media Preview">
     <div class="modal-content-wrap">
-      <button class="modal-close-btn" id="modal-close">✕</button>
+      <button class="modal-close-btn" id="modal-close" aria-label="Close modal">✕</button>
       <img src="" alt="Expanded Preview" class="modal-img" id="modal-img">
     </div>
   </div>
