@@ -63,6 +63,26 @@ body {
   display: none !important;
 }
 
+/* Handshake AI Official Logo Image Styling */
+.handshake-logo-img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  border-radius: 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.handshake-logo-img.lg-logo {
+  width: 44px;
+  height: 44px;
+}
+
+.handshake-logo-img.sm-logo {
+  width: 20px;
+  height: 20px;
+}
+
 /* Premium Mouse Spotlight Glow Follower */
 .spotlight-follower {
   position: fixed;
@@ -722,62 +742,6 @@ section {
   100% { top: 200%; }
 }
 
-/* Academic Section Visual Media Showcase */
-.academic-grid-layout {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 32px;
-  align-items: stretch;
-}
-
-.academic-media-card {
-  position: relative;
-  border-radius: var(--border-radius-md);
-  overflow: hidden;
-  border: 1px solid rgba(255, 46, 77, 0.32);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8);
-  cursor: pointer;
-  height: 100%;
-  min-height: 320px;
-}
-
-.academic-media-img {
-  width: 100%;
-  height: 100%;
-  min-height: 320px;
-  object-fit: cover;
-  display: block;
-  transition: transform var(--transition-slow);
-}
-
-.academic-media-card:hover .academic-media-img {
-  transform: scale(1.04);
-}
-
-.academic-media-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(7, 7, 10, 0.92) 0%, rgba(7, 7, 10, 0.2) 60%, transparent 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 24px;
-}
-
-.academic-media-tag {
-  font-family: var(--font-code);
-  font-size: 0.72rem;
-  color: var(--accent-primary);
-  letter-spacing: 0.12em;
-  margin-bottom: 4px;
-}
-
-.academic-media-title {
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: #ffffff;
-}
-
 /* About Me & Yoga Synergy */
 .about-grid {
   display: grid;
@@ -851,7 +815,7 @@ section {
   text-align: center;
 }
 
-/* Human-Crafted Technical Skills & Tooling Grid */
+/* Technical Skills Grid */
 .skills-tab-nav {
   display: flex;
   gap: 10px;
@@ -1344,7 +1308,7 @@ section {
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
-  .hero-grid, .about-grid, .academic-grid-layout, .cert-process-grid, .contact-card-grid {
+  .hero-grid, .about-grid, .education-grid, .cert-process-grid, .contact-card-grid {
     grid-template-columns: 1fr;
     gap: 36px;
   }
