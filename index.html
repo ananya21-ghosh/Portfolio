@@ -264,198 +264,57 @@
     <div class="section-header reveal-scroll">
       <div class="section-tag">// 03. TECHNICAL SKILLS</div>
       <h2 class="section-title">Technologies & Tools</h2>
-      <p class="section-subtitle">Technologies and design software I work with regularly.</p>
+      <p class="section-subtitle">Technologies and design software I work with regularly across frontend, backend, data, and design.</p>
     </div>
 
-    <!-- Filter Navigation Tabs -->
-    <div class="skills-tab-nav reveal-scroll" role="tablist">
-      <button class="skills-tab-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
-      <button class="skills-tab-btn" data-filter="design" role="tab" aria-selected="false">Design</button>
-      <button class="skills-tab-btn" data-filter="frontend" role="tab" aria-selected="false">Frontend</button>
-      <button class="skills-tab-btn" data-filter="backend" role="tab" aria-selected="false">Backend & DB</button>
-      <button class="skills-tab-btn" data-filter="cloud" role="tab" aria-selected="false">Tools & AI</button>
-    </div>
-
-    <!-- Factual Grouped Skills List -->
-    <div class="skills-grid">
-      <!-- Handshake AI -->
-      <div class="human-skill-card reveal-scroll" data-category="cloud">
-        <div class="skill-card-top">
-          <div class="skill-brand-icon" style="background: transparent; border: none;">
-            <img src="assets/handshake_logo.webp" alt="Handshake AI" class="handshake-logo-img lg-logo">
-          </div>
-          <span class="skill-level-badge primary-badge">Work Experience</span>
-        </div>
-        <div class="skill-title-group">
-          <h4>Handshake AI Platform</h4>
-          <p class="skill-meta-desc">AI model evaluation, prompt testing, data annotation, and quality assurance.</p>
-        </div>
-        <div class="skill-tags-row">
-          <span class="skill-tag-pill">Handshake AI</span>
-          <span class="skill-tag-pill">Prompt QA</span>
-        </div>
+    <!-- Grouped Factual Skills Cards -->
+    <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+      <!-- Group 1: Design -->
+      <div class="glass-panel reveal-scroll" style="padding: 22px;">
+        <div style="font-family: var(--font-code); font-size: 0.8rem; color: var(--accent-primary); margin-bottom: 8px;">🎨 DESIGN & UI/UX</div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: var(--text-main);">
+          <li>• Graphic Design</li>
+          <li>• Brand Identity</li>
+          <li>• UI/UX Layout Architecture</li>
+          <li>• Typography & Color Systems</li>
+          <li>• Vector Graphic Illustration</li>
+        </ul>
       </div>
 
-      <!-- Graphic Design -->
-      <div class="human-skill-card reveal-scroll" data-category="design">
-        <div class="skill-card-top">
-          <div class="skill-brand-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c3.31 0 6-2.69 6-6 0-4.96-4.49-9-10-9zm-5.5 11c-.83 0-1.5-.67-1.5-1.5S5.67 10 6.5 10s1.5.67 1.5 1.5S7.33 13 6.5 13zm3-4C8.67 9 8 8.33 8 7.5S8.67 6 9.5 6s1.5.67 1.5 1.5S10.33 9 9.5 9zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 6 14.5 6s1.5.67 1.5 1.5S15.33 9 14.5 9zm3 4c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
-          </div>
-          <span class="skill-level-badge primary-badge">Graphic Design</span>
-        </div>
-        <div class="skill-title-group">
-          <h4>Graphic Design & Branding</h4>
-          <p class="skill-meta-desc">Brand identity guidelines, logo vectors, layout designs, and typography.</p>
-        </div>
-        <div class="skill-tags-row">
-          <span class="skill-tag-pill">Brand Identity</span>
-          <span class="skill-tag-pill">Vector Design</span>
-        </div>
+      <!-- Group 2: Frontend -->
+      <div class="glass-panel reveal-scroll" style="padding: 22px;">
+        <div style="font-family: var(--font-code); font-size: 0.8rem; color: var(--accent-primary); margin-bottom: 8px;">💻 FRONTEND DEVELOPMENT</div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: var(--text-main);">
+          <li>• HTML5 & Semantic Markup</li>
+          <li>• CSS3 (Grid, Flexbox & Keyframes)</li>
+          <li>• JavaScript (ES6+ Async/Await)</li>
+          <li>• React.js & Hooks Architecture</li>
+          <li>• Tailwind CSS Framework</li>
+        </ul>
       </div>
 
-      <!-- UI/UX Design -->
-      <div class="human-skill-card reveal-scroll" data-category="design">
-        <div class="skill-card-top">
-          <div class="skill-brand-icon">
-            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"/></svg>
-          </div>
-          <span class="skill-level-badge primary-badge">UI/UX</span>
-        </div>
-        <div class="skill-title-group">
-          <h4>UI/UX Layouts</h4>
-          <p class="skill-meta-desc">Wireframing, user flows, responsive layouts, design tokens, and interface hierarchy.</p>
-        </div>
-        <div class="skill-tags-row">
-          <span class="skill-tag-pill">Wireframing</span>
-          <span class="skill-tag-pill">Design Tokens</span>
-        </div>
+      <!-- Group 3: Backend & Databases -->
+      <div class="glass-panel reveal-scroll" style="padding: 22px;">
+        <div style="font-family: var(--font-code); font-size: 0.8rem; color: var(--accent-primary); margin-bottom: 8px;">⚙️ BACKEND & DATABASES</div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: var(--text-main);">
+          <li>• Node.js Runtime</li>
+          <li>• Express.js REST APIs</li>
+          <li>• MongoDB & Mongoose ORM</li>
+          <li>• Relational SQL Database Querying</li>
+          <li>• Data Science Fundamentals</li>
+        </ul>
       </div>
 
-      <!-- HTML5 & CSS3 -->
-      <div class="human-skill-card reveal-scroll" data-category="frontend">
-        <div class="skill-card-top">
-          <div class="skill-brand-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2L2 5l1.6 14.5L12 22l8.4-2.5L22 5l-10-3zm6.3 16.5L12 20.3l-6.3-1.8L4.3 6.5h15.4l-1.4 12z"/></svg>
-          </div>
-          <span class="skill-level-badge">Frontend</span>
-        </div>
-        <div class="skill-title-group">
-          <h4>HTML5 & CSS3</h4>
-          <p class="skill-meta-desc">Semantic HTML5 markup, CSS Grid, Flexbox, keyframe animations, and custom styling.</p>
-        </div>
-        <div class="skill-tags-row">
-          <span class="skill-tag-pill">CSS Grid</span>
-          <span class="skill-tag-pill">Flexbox</span>
-        </div>
-      </div>
-
-      <!-- JavaScript -->
-      <div class="human-skill-card reveal-scroll" data-category="frontend">
-        <div class="skill-card-top">
-          <div class="skill-brand-icon">
-            <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm10.5 13.5v-1.8c0-.7.3-1.2 1-1.2.6 0 .9.3.9 1v2c0 1.2-.8 2-2.2 2-1.5 0-2.3-.9-2.3-2.3v-1.7h1.6v1.7c0 .4.2.7.7.7.3 0 .3-.2.3-.4zM8 16.5v-1.8c0-.7.3-1.2 1-1.2.6 0 .9.3.9 1v.5H11.5v-.5C11.5 13.1 10.7 12 9 12s-2.5 1.1-2.5 2.7v1.8c0 1.6.9 2.7 2.5 2.7s2.5-1.1 2.5-2.7v-.5H9.9v.5c0 .4-.2.7-.7.7-.3 0-.7-.2-.7-.7z"/></svg>
-          </div>
-          <span class="skill-level-badge primary-badge">Core Language</span>
-        </div>
-        <div class="skill-title-group">
-          <h4>JavaScript (ES6+)</h4>
-          <p class="skill-meta-desc">Async/await, DOM APIs, promises, ES Modules, and client-side application logic.</p>
-        </div>
-        <div class="skill-tags-row">
-          <span class="skill-tag-pill">Async/Await</span>
-          <span class="skill-tag-pill">ES6 Modules</span>
-        </div>
-      </div>
-
-      <!-- React.js -->
-      <div class="human-skill-card reveal-scroll" data-category="frontend">
-        <div class="skill-card-top">
-          <div class="skill-brand-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 9a3 3 0 100 6 3 3 0 000-6zm0-7C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
-          </div>
-          <span class="skill-level-badge primary-badge">Framework</span>
-        </div>
-        <div class="skill-title-group">
-          <h4>React.js</h4>
-          <p class="skill-meta-desc">Component-driven architecture, custom hooks, state management, and Vite development tooling.</p>
-        </div>
-        <div class="skill-tags-row">
-          <span class="skill-tag-pill">React Hooks</span>
-          <span class="skill-tag-pill">Vite</span>
-        </div>
-      </div>
-
-      <!-- Tailwind CSS -->
-      <div class="human-skill-card reveal-scroll" data-category="frontend">
-        <div class="skill-card-top">
-          <div class="skill-brand-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 3.73 7.61 3.73 12c0 3.35 2.16 6.2 5.27 7.15.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.17.47-2.63-.92-2.63-.92-.35-.9-.86-1.14-.86-1.14-.71-.48.05-.47.05-.47.78.06 1.19.8 1.19.8.7 1.19 1.83.85 2.27.65.07-.5.27-.85.49-1.05-1.73-.2-3.55-.86-3.55-3.84 0-.85.3-1.54.8-2.08-.08-.2-.35-.98.08-2.05 0 0 .65-.21 2.13.79.62-.17 1.28-.26 1.94-.26s1.32.09 1.94.26c1.48-1 2.13-.79 2.13-.79.43 1.07.16 1.85.08 2.05.5.54.8 1.23.8 2.08 0 2.99-1.82 3.64-3.55 3.84.28.24.53.72.53 1.45 0 1.05-.01 1.9-.01 2.16 0 .27.18.58.69.48C18.11 18.2 20.27 15.35 20.27 12c0-4.39-3.27-7.5-8.27-7.5z"/></svg>
-          </div>
-          <span class="skill-level-badge">Styling</span>
-        </div>
-        <div class="skill-title-group">
-          <h4>Tailwind CSS</h4>
-          <p class="skill-meta-desc">Utility-first styling, responsive breakpoint systems, and custom theme configurations.</p>
-        </div>
-        <div class="skill-tags-row">
-          <span class="skill-tag-pill">Utility Styling</span>
-          <span class="skill-tag-pill">Responsive</span>
-        </div>
-      </div>
-
-      <!-- Node.js & Express -->
-      <div class="human-skill-card reveal-scroll" data-category="backend">
-        <div class="skill-card-top">
-          <div class="skill-brand-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5v7l-7 3.5-7-3.5v-7l7-3.5z"/></svg>
-          </div>
-          <span class="skill-level-badge primary-badge">Backend</span>
-        </div>
-        <div class="skill-title-group">
-          <h4>Node.js & Express</h4>
-          <p class="skill-meta-desc">REST API development, Express routing middleware, controllers, and backend routing.</p>
-        </div>
-        <div class="skill-tags-row">
-          <span class="skill-tag-pill">REST APIs</span>
-          <span class="skill-tag-pill">Express</span>
-        </div>
-      </div>
-
-      <!-- MongoDB & SQL -->
-      <div class="human-skill-card reveal-scroll" data-category="backend">
-        <div class="skill-card-top">
-          <div class="skill-brand-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4zm0 2c3.87 0 6 1.3 6 2s-2.13 2-6 2-6-1.3-6-2 2.13-2 6-2zm6 7c0 .7-2.13 2-6 2s-6-1.3-6-2V9.75C7.45 10.5 9.58 11 12 11s4.55-.5 6-1.25V12zm0 5c0 .7-2.13 2-6 2s-6-1.3-6-2v-2.25c1.45.75 3.58 1.25 6 1.25s4.55-.5 6-1.25V17z"/></svg>
-          </div>
-          <span class="skill-level-badge">Databases</span>
-        </div>
-        <div class="skill-title-group">
-          <h4>MongoDB & SQL</h4>
-          <p class="skill-meta-desc">Relational SQL queries, MongoDB document schemas, Mongoose models, and data aggregation.</p>
-        </div>
-        <div class="skill-tags-row">
-          <span class="skill-tag-pill">Mongoose ORM</span>
-          <span class="skill-tag-pill">SQL Queries</span>
-        </div>
-      </div>
-
-      <!-- Tools & Cloud -->
-      <div class="human-skill-card reveal-scroll" data-category="cloud">
-        <div class="skill-card-top">
-          <div class="skill-brand-icon">
-            <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/></svg>
-          </div>
-          <span class="skill-level-badge primary-badge">Certified</span>
-        </div>
-        <div class="skill-title-group">
-          <h4>Google Cloud & Git</h4>
-          <p class="skill-meta-desc">GCP Study Jams certified, cloud hosting workflows, Git version control, GitHub, and Vercel hosting.</p>
-        </div>
-        <div class="skill-tags-row">
-          <span class="skill-tag-pill">GCP Certified</span>
-          <span class="skill-tag-pill">Git / GitHub</span>
-        </div>
+      <!-- Group 4: Cloud, Tools & AI -->
+      <div class="glass-panel reveal-scroll" style="padding: 22px;">
+        <div style="font-family: var(--font-code); font-size: 0.8rem; color: var(--accent-primary); margin-bottom: 8px;">🤝 TOOLS & AI PLATFORMS</div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: var(--text-main);">
+          <li>• Handshake AI Evaluation & Prompt QA</li>
+          <li>• Google Cloud Platform (Study Jams Certified)</li>
+          <li>• Git & GitHub Version Control</li>
+          <li>• Vercel Deployment & Hosting</li>
+          <li>• Vite Build Tooling</li>
+        </ul>
       </div>
     </div>
   </section>
