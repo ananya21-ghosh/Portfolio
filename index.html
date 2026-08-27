@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>Ananya Ghosh — Full Stack Developer & Graphic Designer</title>
   <meta name="description" content="Personal portfolio of Ananya Ghosh. Full Stack Developer, Graphic Designer, Handshake AI Experience, B.Tech CSE (Data Science) student at FIEM, Sarada Vidyapith HS alumnus, and Google Cloud Study Jams achiever.">
   
@@ -27,6 +27,16 @@
   <div class="ambient-glow glow-top-right"></div>
   <div class="ambient-glow glow-bottom-left"></div>
 
+  <!-- Mobile Drawer Menu for Android Devices -->
+  <div class="mobile-nav-drawer" id="mobile-drawer">
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#education" class="mobile-nav-link">Education</a>
+    <a href="#skills" class="mobile-nav-link">Skills</a>
+    <a href="#projects" class="mobile-nav-link">Projects</a>
+    <a href="#certifications" class="mobile-nav-link">Certifications</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+  </div>
+
   <!-- Navigation Bar -->
   <nav class="navbar">
     <a href="#" class="logo">
@@ -41,10 +51,16 @@
       <li><a href="#certifications" class="nav-link">Certifications</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
+    
     <div class="status-badge">
       <span class="pulse-green"></span>
       <span>Available for Projects</span>
     </div>
+
+    <!-- Mobile Hamburger Toggle for Android -->
+    <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">
+      ☰
+    </button>
   </nav>
 
   <!-- Hero Section -->
@@ -104,7 +120,7 @@
         </div>
       </div>
 
-      <!-- 1st Photo Hero Showcase - Natural Pristine Color (Zero Red Filter Effect) -->
+      <!-- 1st Photo Hero Showcase -->
       <div class="hero-portrait-card cinematic-3d-card reveal-scroll" id="portrait-card">
         <!-- Floating Badges -->
         <div class="floating-badge badge-top-left">
@@ -236,7 +252,7 @@
     </div>
 
     <!-- 3 Card Grid: Handshake AI Experience + College + High School -->
-    <div class="education-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
+    <div class="education-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
       <!-- Card 1: Handshake AI Work Experience -->
       <div class="glass-panel reveal-scroll" style="display: flex; gap: 20px; align-items: flex-start; border-color: rgba(255,46,77,0.45); background: rgba(255,46,77,0.06);">
         <div class="skill-icon-box" style="width: 54px; height: 54px; flex-shrink: 0; background: rgba(255,46,77,0.15); border-color: var(--accent-primary); display: flex; align-items: center; justify-content: center;">

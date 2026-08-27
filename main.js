@@ -1,280 +1,205 @@
-/* ==========================================================================
-   Ananya Ghosh Portfolio - Human-Crafted Interactive Logic Module
-   ========================================================================== */
+// Ananya Ghosh Portfolio Interactivity Script
 
 document.addEventListener('DOMContentLoaded', () => {
-  initSpotlightFollower();
-  init3DCardTilt();
-  initNavbarScroll();
-  initRoleTypewriter();
-  initSkillsFilter();
-  initLightboxModal();
-  initPremiumScrollAnimations();
-  initComponentBoxTilt();
-  initContactForm();
-});
+  // Mobile Drawer Toggle for Android Devices
+  const menuToggleBtn = document.getElementById('menu-toggle');
+  const mobileDrawer = document.getElementById('mobile-drawer');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
-/* Mouse Spotlight Glow Follower */
-function initSpotlightFollower() {
+  if (menuToggleBtn && mobileDrawer) {
+    menuToggleBtn.addEventListener('click', () => {
+      mobileDrawer.classList.toggle('active');
+      menuToggleBtn.textContent = mobileDrawer.classList.contains('active') ? '✕' : '☰';
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.remove('active');
+        menuToggleBtn.textContent = '☰';
+      });
+    });
+  }
+
+  // Mouse Spotlight Follower (Disabled on Touch Screen / Android)
   const spotlight = document.getElementById('spotlight');
-  if (!spotlight) return;
+  if (spotlight && window.matchMedia('(pointer: fine)').matches) {
+    window.addEventListener('mousemove', (e) => {
+      spotlight.style.left = `${e.clientX}px`;
+      spotlight.style.top = `${e.clientY}px`;
+    });
+  }
 
-  window.addEventListener('mousemove', (e) => {
-    spotlight.style.left = `${e.clientX}px`;
-    spotlight.style.top = `${e.clientY}px`;
-  });
-}
+  // 3D Card Hover Tilt Effect for Desktop
+  const portraitCard = document.getElementById('portrait-card');
+  if (portraitCard && window.matchMedia('(pointer: fine)').matches) {
+    const frame = portraitCard.querySelector('.cinematic-frame');
+    portraitCard.addEventListener('mousemove', (e) => {
+      const rect = portraitCard.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = (y - centerY) / 18;
+      const rotateY = (centerX - x) / 18;
+      if (frame) {
+        frame.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+      }
+    });
 
-/* Hero Portrait 3D Card Tilt */
-function init3DCardTilt() {
-  const card = document.getElementById('portrait-card');
-  const frame = card ? card.querySelector('.portrait-wrapper') : null;
-  if (!card || !frame) return;
+    portraitCard.addEventListener('mouseleave', () => {
+      if (frame) {
+        frame.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+      }
+    });
+  }
 
-  card.addEventListener('mousemove', (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const rotateX = (y - centerY) / 22;
-    const rotateY = (centerX - x) / 22;
-
-    frame.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.01, 1.01, 1.01)`;
-  });
-
-  card.addEventListener('mouseleave', () => {
-    frame.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-    frame.style.transition = 'transform 0.5s ease';
-  });
-
-  card.addEventListener('mouseenter', () => {
-    frame.style.transition = 'transform 0.1s ease-out';
-  });
-}
-
-/* Navbar Scrolled State */
-function initNavbarScroll() {
+  // Navbar Scroll Listener
   const navbar = document.querySelector('.navbar');
-  if (!navbar) return;
-
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
+    if (window.scrollY > 50) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
     }
   });
-}
 
-/* Dynamic Typewriter Role Switcher */
-function initRoleTypewriter() {
-  const targetEl = document.getElementById('typing-text');
-  if (!targetEl) return;
+  // Typewriter Role Switcher
+  const typingText = document.getElementById('typing-text');
+  if (typingText) {
+    const roles = [
+      'Full Stack Developer',
+      'Experienced Graphic Designer',
+      'Handshake AI Specialist',
+      'Data Science Engineer'
+    ];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
 
-  const roles = [
-    "Full Stack Developer",
-    "Experienced Graphic Designer",
-    "Frontend Specialist",
-    "Data Science Engineer",
-    "Mindful Yoga Practicer"
-  ];
+    function type() {
+      const currentRole = roles[roleIndex];
+      if (isDeleting) {
+        typingText.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+        typingSpeed = 50;
+      } else {
+        typingText.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+        typingSpeed = 110;
+      }
 
-  let roleIdx = 0;
-  let charIdx = 0;
-  let isDeleting = false;
-  let typeSpeed = 100;
+      if (!isDeleting && charIndex === currentRole.length) {
+        isDeleting = true;
+        typingSpeed = 2200; // Pause at end
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        typingSpeed = 500;
+      }
 
-  function type() {
-    const currentRole = roles[roleIdx];
-
-    if (isDeleting) {
-      targetEl.textContent = currentRole.substring(0, charIdx - 1);
-      charIdx--;
-      typeSpeed = 45;
-    } else {
-      targetEl.textContent = currentRole.substring(0, charIdx + 1);
-      charIdx++;
-      typeSpeed = 100;
+      setTimeout(type, typingSpeed);
     }
 
-    if (!isDeleting && charIdx === currentRole.length) {
-      typeSpeed = 2200;
-      isDeleting = true;
-    } else if (isDeleting && charIdx === 0) {
-      isDeleting = false;
-      roleIdx = (roleIdx + 1) % roles.length;
-      typeSpeed = 400;
-    }
-
-    setTimeout(type, typeSpeed);
+    type();
   }
 
-  type();
-}
-
-/* Technical Skills & Tooling Tab Filter */
-function initSkillsFilter() {
-  const tabBtns = document.querySelectorAll('.skills-tab-btn');
+  // Skills Filtering Tabs
+  const tabButtons = document.querySelectorAll('.skills-tab-btn');
   const skillCards = document.querySelectorAll('.human-skill-card');
 
-  tabBtns.forEach(btn => {
+  tabButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      tabBtns.forEach(b => b.classList.remove('active'));
+      tabButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      const filter = btn.dataset.filter;
+      const filter = btn.getAttribute('data-filter');
 
       skillCards.forEach(card => {
-        if (filter === 'all' || card.dataset.category === filter) {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
           card.style.display = 'flex';
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'scale(1)';
-          }, 50);
+          setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'scale(1)'; }, 50);
         } else {
           card.style.opacity = '0';
           card.style.transform = 'scale(0.95)';
-          setTimeout(() => {
-            card.style.display = 'none';
-          }, 200);
+          setTimeout(() => { card.style.display = 'none'; }, 300);
         }
       });
     });
   });
-}
 
-/* Image Lightbox Modal */
-function initLightboxModal() {
+  // Lightbox Zoom Modal
   const modal = document.getElementById('lightbox-modal');
   const modalImg = document.getElementById('modal-img');
   const modalClose = document.getElementById('modal-close');
   const zoomTriggers = document.querySelectorAll('[data-zoom-src]');
 
-  if (!modal || !modalImg) return;
-
   zoomTriggers.forEach(trigger => {
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
       const imgSrc = trigger.getAttribute('data-zoom-src');
-      if (imgSrc) {
+      if (imgSrc && modal && modalImg) {
         modalImg.src = imgSrc;
         modal.classList.add('active');
       }
     });
   });
 
-  if (modalClose) {
+  if (modalClose && modal) {
     modalClose.addEventListener('click', () => {
       modal.classList.remove('active');
     });
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
   }
 
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.classList.remove('active');
-    }
-  });
+  // Scroll Reveal Intersection Observer
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-      modal.classList.remove('active');
-    }
-  });
-}
-
-/* Premium Quality Scroll Component Box Reveal Animations */
-function initPremiumScrollAnimations() {
-  const revealItems = document.querySelectorAll('.reveal-scroll');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }, observerOptions);
 
-  revealItems.forEach((el, index) => {
-    el.style.transitionDelay = `${(index % 4) * 0.08}s`;
-    observer.observe(el);
+  document.querySelectorAll('.reveal-scroll').forEach(el => {
+    revealObserver.observe(el);
   });
-}
 
-/* Dynamic 3D Micro-Tilt Responsiveness on Hover for All Component Boxes */
-function initComponentBoxTilt() {
-  const boxes = document.querySelectorAll('.glass-panel, .project-card, .human-skill-card');
+  // Contact Form Feedback
+  const contactForm = document.getElementById('contact-form');
+  const formFeedback = document.getElementById('form-feedback');
 
-  boxes.forEach(box => {
-    box.addEventListener('mousemove', (e) => {
-      const rect = box.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-
-      const rotateX = (y - centerY) / 35;
-      const rotateY = (centerX - x) / 35;
-
-      box.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-    });
-
-    box.addEventListener('mouseleave', () => {
-      box.style.transform = `perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
-      box.style.transition = 'transform 0.4s ease';
-    });
-
-    box.addEventListener('mouseenter', () => {
-      box.style.transition = 'transform 0.08s ease-out';
-    });
-  });
-}
-
-/* Contact Form Submission Feedback */
-function initContactForm() {
-  const form = document.getElementById('contact-form');
-  const feedbackEl = document.getElementById('form-feedback');
-
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    const origText = btn.innerHTML;
-
-    btn.disabled = true;
-    btn.innerHTML = 'Sending Message...';
-
-    setTimeout(() => {
-      btn.innerHTML = 'Message Sent! ✓';
-      btn.style.background = '#10b981';
-      form.reset();
-
-      if (feedbackEl) {
-        feedbackEl.textContent = 'Thank you for reaching out! Ananya will respond to your message soon.';
-        feedbackEl.style.color = '#10b981';
-        feedbackEl.style.display = 'block';
-      }
-
+  if (contactForm && formFeedback) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formFeedback.style.display = 'block';
+      formFeedback.style.color = '#10b981';
+      formFeedback.textContent = '✓ Thank you! Your message has been sent successfully. Ananya will respond shortly.';
+      contactForm.reset();
       setTimeout(() => {
-        btn.disabled = false;
-        btn.innerHTML = origText;
-        btn.style.background = '';
-        if (feedbackEl) feedbackEl.style.display = 'none';
-      }, 4000);
-    }, 1200);
-  });
-}
+        formFeedback.style.display = 'none';
+      }, 5000);
+    });
+  }
+});
 
-/* Helper function to copy email */
+// Email Clipboard Helper
 function copyEmailToClipboard() {
   const email = '07ananyaghosg07@gmail.com';
   navigator.clipboard.writeText(email).then(() => {
-    alert('Email copied to clipboard: ' + email);
-  }).catch(() => {
-    prompt('Copy email:', email);
+    alert('Email copied to clipboard: 07ananyaghosg07@gmail.com');
+  }).catch(err => {
+    alert('Direct Email: 07ananyaghosg07@gmail.com');
   });
 }
