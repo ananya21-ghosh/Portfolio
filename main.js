@@ -1,7 +1,7 @@
-// Ananya Ghosh Portfolio Interactivity Script
+// Ananya Ghosh Portfolio Interactivity & Validation Script
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile Drawer Toggle for Android Devices
+  // Mobile Navigation Drawer Toggle
   const menuToggleBtn = document.getElementById('menu-toggle');
   const mobileDrawer = document.getElementById('mobile-drawer');
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Mouse Spotlight Follower (Disabled on Touch Screen / Android)
+  // Mouse Spotlight Follower (Fine pointer / Desktop only)
   const spotlight = document.getElementById('spotlight');
   if (spotlight && window.matchMedia('(pointer: fine)').matches) {
     window.addEventListener('mousemove', (e) => {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3D Card Hover Tilt Effect for Desktop
+  // 3D Card Hover Tilt Effect for Desktop Showcase
   const portraitCard = document.getElementById('portrait-card');
   if (portraitCard && window.matchMedia('(pointer: fine)').matches) {
     const frame = portraitCard.querySelector('.cinematic-frame');
@@ -56,21 +56,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // Navbar Scroll Listener
   const navbar = document.querySelector('.navbar');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 40) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
     }
   });
 
-  // Typewriter Role Switcher
+  // Role Typewriter Switcher
   const typingText = document.getElementById('typing-text');
   if (typingText) {
     const roles = [
-      'Full Stack Developer',
-      'Experienced Graphic Designer',
-      'Handshake AI Specialist',
-      'Data Science Engineer'
+      'Full Stack Web Systems',
+      'Experienced Graphic Design',
+      'Handshake AI Workflows',
+      'Data Science Solutions'
     ];
     let roleIndex = 0;
     let charIndex = 0;
@@ -82,20 +82,20 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isDeleting) {
         typingText.textContent = currentRole.substring(0, charIndex - 1);
         charIndex--;
-        typingSpeed = 50;
+        typingSpeed = 45;
       } else {
         typingText.textContent = currentRole.substring(0, charIndex + 1);
         charIndex++;
-        typingSpeed = 110;
+        typingSpeed = 100;
       }
 
       if (!isDeleting && charIndex === currentRole.length) {
         isDeleting = true;
-        typingSpeed = 2200; // Pause at end
+        typingSpeed = 2200; // Pause
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         roleIndex = (roleIndex + 1) % roles.length;
-        typingSpeed = 500;
+        typingSpeed = 400;
       }
 
       setTimeout(type, typingSpeed);
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     type();
   }
 
-  // Skills Filtering Tabs
+  // Technical Skills Category Tabs
   const tabButtons = document.querySelectorAll('.skills-tab-btn');
   const skillCards = document.querySelectorAll('.human-skill-card');
 
@@ -123,13 +123,13 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           card.style.opacity = '0';
           card.style.transform = 'scale(0.95)';
-          setTimeout(() => { card.style.display = 'none'; }, 300);
+          setTimeout(() => { card.style.display = 'none'; }, 280);
         }
       });
     });
   });
 
-  // Lightbox Zoom Modal
+  // Lightbox Zoom Modal for Mobile & Desktop Screenshots
   const modal = document.getElementById('lightbox-modal');
   const modalImg = document.getElementById('modal-img');
   const modalClose = document.getElementById('modal-close');
@@ -158,11 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Scroll Reveal Intersection Observer
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -170,36 +165,96 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.unobserve(entry.target);
       }
     });
-  }, observerOptions);
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.reveal-scroll').forEach(el => {
     revealObserver.observe(el);
   });
 
-  // Contact Form Feedback
+  // Requirement 3: Contact Form Client-side Validation & Toast Feedback
   const contactForm = document.getElementById('contact-form');
-  const formFeedback = document.getElementById('form-feedback');
+  const toastFeedback = document.getElementById('toast-feedback');
 
-  if (contactForm && formFeedback) {
+  if (contactForm && toastFeedback) {
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    // Email Regular Expression Validation
+    const isValidEmail = (email) => {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(String(email).toLowerCase());
+    };
+
+    const showToast = (message, type) => {
+      toastFeedback.className = `toast-feedback ${type}`;
+      toastFeedback.innerHTML = message;
+      toastFeedback.style.display = 'flex';
+
+      if (type === 'success') {
+        setTimeout(() => {
+          toastFeedback.style.display = 'none';
+        }, 6000);
+      }
+    };
+
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      formFeedback.style.display = 'block';
-      formFeedback.style.color = '#10b981';
-      formFeedback.textContent = '✓ Thank you! Your message has been sent successfully. Ananya will respond shortly.';
-      contactForm.reset();
+
+      // Clear previous field highlight states
+      [nameInput, emailInput, messageInput].forEach(field => {
+        if (field) field.classList.remove('invalid-field');
+      });
+
+      const nameVal = nameInput ? nameInput.value.trim() : '';
+      const emailVal = emailInput ? emailInput.value.trim() : '';
+      const messageVal = messageInput ? messageInput.value.trim() : '';
+
+      // Validation Checks
+      if (!nameVal) {
+        if (nameInput) nameInput.classList.add('invalid-field');
+        showToast('❌ Please enter your name.', 'error');
+        nameInput.focus();
+        return;
+      }
+
+      if (!emailVal || !isValidEmail(emailVal)) {
+        if (emailInput) emailInput.classList.add('invalid-field');
+        showToast('❌ Please enter a valid email address (e.g. alex@example.com).', 'error');
+        emailInput.focus();
+        return;
+      }
+
+      if (!messageVal || messageVal.length < 5) {
+        if (messageInput) messageInput.classList.add('invalid-field');
+        showToast('❌ Please write a message (at least 5 characters).', 'error');
+        messageInput.focus();
+        return;
+      }
+
+      // Success Feedback & Direct Mailto Fallback Setup
+      const mailtoSubject = encodeURIComponent(`Portfolio Contact from ${nameVal}`);
+      const mailtoBody = encodeURIComponent(`Name: ${nameVal}\nEmail: ${emailVal}\n\nMessage:\n${messageVal}`);
+      const mailtoUrl = `mailto:07ananyaghosg07@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+      showToast(`✓ Thank you ${nameVal}! Your message has been prepared. Opening email app...`, 'success');
+
+      // Trigger mailto fallback so user's native email client opens smoothly
       setTimeout(() => {
-        formFeedback.style.display = 'none';
-      }, 5000);
+        window.location.href = mailtoUrl;
+      }, 1000);
+
+      contactForm.reset();
     });
   }
 });
 
-// Email Clipboard Helper
+// Copy Direct Email Helper
 function copyEmailToClipboard() {
   const email = '07ananyaghosg07@gmail.com';
   navigator.clipboard.writeText(email).then(() => {
     alert('Email copied to clipboard: 07ananyaghosg07@gmail.com');
-  }).catch(err => {
+  }).catch(() => {
     alert('Direct Email: 07ananyaghosg07@gmail.com');
   });
 }
