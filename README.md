@@ -18,7 +18,6 @@ A high-performance, responsive dark glassmorphism portfolio and digital CV websi
 
 ## ✨ Features & Highlights
 
-- **Verified Digital Curriculum Vitae Section (`#resume`)**: Includes interactive CV paper view and instant `@media print` native browser PDF export functionality.
 - **Verified Contact Details**:
   - **Phone**: `7044361649`
   - **Location / Address**: `Kolkata, West Bengal`
