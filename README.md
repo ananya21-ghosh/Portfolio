@@ -1,10 +1,10 @@
-# Ananya Ghosh — Full Stack Developer & Graphic Designer Portfolio
+# Ananya Ghosh — B.Tech CSE (DS) Portfolio & Verified CV
 
 [![Live Production](https://img.shields.io/badge/Vercel-Live_Production-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://pf-rho-six.vercel.app)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ananya21-ghosh/Portfolio)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
-A high-performance, responsive dark glassmorphism developer portfolio website for **Ananya Ghosh**, featuring clean human copywriting, live project showcases, verified certifications, technical skills, and responsive layout across desktop and mobile devices.
+A high-performance, responsive dark glassmorphism portfolio and digital CV website for **Ananya Ghosh**, featuring 100% verified profile details, direct phone contact (`7044361649`), address location (`Sonarpur, Kolkata`), work experience (`Handshake AI` and `Vidyanest`), academic record (`FIEM B.Tech CSE Data Science` & `Sarada Vidyapith HS`), and print-ready PDF export.
 
 ---
 
@@ -18,15 +18,19 @@ A high-performance, responsive dark glassmorphism developer portfolio website fo
 
 ## ✨ Features & Highlights
 
-- **Obsidian Dark Glassmorphism Design System**: Built with modern CSS variables, ambient glow background orbs, top-edge gradient border highlights, and micro-typography.
-- **Handshake AI Work Experience Integration**: Prominent highlights of professional experience working on the **Handshake AI** platform (model evaluation, prompt optimization, data annotation, and technical QA).
-- **Featured Projects Showcase**:
-  - **NextStep — Career Pathway Platform**: Live demo link (`https://next-step-ivory-iota.vercel.app/`) and GitHub repository link.
-  - **NAZAR — AI Cybersecurity Dashboard**: Interactive preview poster and repository link.
-- **Human-Authored Tone & Clean Copy**: Crisp developer headlines, concise bullet points, and zero fluff.
-- **Interactive Lightbox Modal**: Click-to-expand preview modals for project screenshots and verified certificate images.
-- **Contact Form Validation**: Client-side regex email validation, field highlighting, animated toast feedback notifications, and native `mailto:` fallback (`07ananyaghosg07@gmail.com`).
-- **Fully Responsive**: Mobile menu drawer toggle (`#mobile-drawer`), touch-friendly 44px+ tap targets, and fluid responsive grid layouts for Android mobile, tablet, and desktop viewports.
+- **Verified Digital Curriculum Vitae Section (`#resume`)**: Includes interactive CV paper view and instant `@media print` native browser PDF export functionality.
+- **Verified Contact Details**:
+  - **Phone**: `7044361649`
+  - **Location / Address**: `Sonarpur, Kolkata, West Bengal`
+  - **Email**: `07ananyaghosh07@gmail.com`
+- **Authentic Work Experience**:
+  - **Handshake AI (Project Seal India)**: AI Data Specialist & Prompt Contributor (Part-Time Job).
+  - **Vidyanest**: Telesales Executive (Jan 2025 – Nov 2025).
+- **Academic Background**:
+  - **FIEM (Future Institute of Engineering and Management)**: B.Tech CSE (Data Science) [2025 – 2029].
+  - **Sarada Vidyapith (H.S)**: 10th (2022-23) & 12th (2024-25).
+- **Soft Skills & Extra-Curriculars**: Good communication skills, stage presence & confidence (College Fashion Show Ramp Walk participant), teamwork, time management, and active yoga practice.
+- **Obsidian Glassmorphism Theme**: Responsive layout across mobile, tablet, and desktop viewports.
 
 ---
 
@@ -35,9 +39,9 @@ A high-performance, responsive dark glassmorphism developer portfolio website fo
 | Domain | Technologies |
 | :--- | :--- |
 | **Frontend** | HTML5, Modern CSS3 (Grid, Flexbox, Keyframes), JavaScript (ES6+), React.js, Tailwind CSS |
-| **Backend & DB** | Node.js, Express.js, REST APIs, MongoDB, Mongoose, Relational SQL |
-| **Cloud & Tools** | Google Cloud Platform (GCP Study Jams Certified), Git, GitHub, Vercel CLI |
-| **Design** | Brand Identity, Vector Graphics, Wireframing, UI/UX Layout Architecture |
+| **Programming** | C (Basic), Python (Basic), JavaScript, Node.js, Express.js |
+| **Design & Tools** | Graphics Designing, Canva, MS Word, MS PowerPoint, UI/UX Layouts |
+| **Cloud & Hosting** | Vercel Hosting, Git & GitHub, Google Cloud Platform (Study Jams Achiever) |
 
 ---
 
@@ -65,4 +69,5 @@ To run this repository locally:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Developed with ❤️ by **Ananya Ghosh**.
+Developed with ❤️ by **Ananya Ghosh** (Sonarpur, Kolkata • Ph: 7044361649).
+

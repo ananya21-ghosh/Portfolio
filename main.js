@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const mailtoSubject = encodeURIComponent(`Portfolio Message from ${nameVal}`);
       const mailtoBody = encodeURIComponent(`Name: ${nameVal}\nEmail: ${emailVal}\n\nMessage:\n${messageVal}`);
-      const mailtoUrl = `mailto:07ananyaghosg07@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+      const mailtoUrl = `mailto:07ananyaghosh07@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
 
       showToast(`✓ Thank you ${nameVal}! Your message is prepared. Opening email app...`, 'success');
 
@@ -259,10 +259,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Copy Direct Email Helper
 function copyEmailToClipboard() {
-  const email = '07ananyaghosg07@gmail.com';
+  const email = '07ananyaghosh07@gmail.com';
   navigator.clipboard.writeText(email).then(() => {
-    alert('Email copied to clipboard: 07ananyaghosg07@gmail.com');
+    alert('Email copied to clipboard: 07ananyaghosh07@gmail.com');
   }).catch(() => {
-    alert('Direct Email: 07ananyaghosg07@gmail.com');
+    alert('Direct Email: 07ananyaghosh07@gmail.com');
   });
 }
+
+// Copy Phone Helper
+function copyPhoneToClipboard() {
+  const phone = '7044361649';
+  navigator.clipboard.writeText(phone).then(() => {
+    alert('Phone number copied to clipboard: 7044361649');
+  }).catch(() => {
+    alert('Phone: 7044361649');
+  });
+}
+
+// Copy Contact & Address Details Helper
+function copyContactDetails() {
+  const text = 'Ananya Ghosh\nPhone: 7044361649\nEmail: 07ananyaghosh07@gmail.com\nAddress: Sonarpur, Kolkata, West Bengal';
+  navigator.clipboard.writeText(text).then(() => {
+    alert('Contact details copied to clipboard!\n\nPhone: 7044361649\nLocation: Sonarpur, Kolkata\nEmail: 07ananyaghosh07@gmail.com');
+  }).catch(() => {
+    alert('Phone: 7044361649\nLocation: Sonarpur, Kolkata\nEmail: 07ananyaghosh07@gmail.com');
+  });
+}
+
