@@ -4,7 +4,7 @@
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ananya21-ghosh/Portfolio)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
-A high-performance, responsive dark glassmorphism portfolio and digital CV website for **Ananya Ghosh**, featuring 100% verified profile details, direct phone contact (`7044361649`), address location (`Sonarpur, Kolkata`), work experience (`Handshake AI` and `Vidyanest`), academic record (`FIEM B.Tech CSE Data Science` & `Sarada Vidyapith HS`), and print-ready PDF export.
+A high-performance, responsive dark glassmorphism portfolio and digital CV website for **Ananya Ghosh**, featuring 100% verified profile details, direct phone contact (`7044361649`), address location (`Kolkata, West Bengal`), work experience (`Handshake AI` and `Vidyanest`), academic record (`FIEM B.Tech CSE Data Science` & `Sarada Vidyapith HS`), and print-ready PDF export.
 
 ---
 
@@ -21,7 +21,7 @@ A high-performance, responsive dark glassmorphism portfolio and digital CV websi
 - **Verified Digital Curriculum Vitae Section (`#resume`)**: Includes interactive CV paper view and instant `@media print` native browser PDF export functionality.
 - **Verified Contact Details**:
   - **Phone**: `7044361649`
-  - **Location / Address**: `Sonarpur, Kolkata, West Bengal`
+  - **Location / Address**: `Kolkata, West Bengal`
   - **Email**: `07ananyaghosh07@gmail.com`
 - **Authentic Work Experience**:
   - **Handshake AI (Project Seal India)**: AI Data Specialist & Prompt Contributor (Part-Time Job).
@@ -69,5 +69,6 @@ To run this repository locally:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Developed with ❤️ by **Ananya Ghosh** (Sonarpur, Kolkata • Ph: 7044361649).
+Developed with ❤️ by **Ananya Ghosh** (Kolkata, West Bengal • Ph: 7044361649).
+
 

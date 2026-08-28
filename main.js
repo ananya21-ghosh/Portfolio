@@ -279,11 +279,12 @@ function copyPhoneToClipboard() {
 
 // Copy Contact & Address Details Helper
 function copyContactDetails() {
-  const text = 'Ananya Ghosh\nPhone: 7044361649\nEmail: 07ananyaghosh07@gmail.com\nAddress: Sonarpur, Kolkata, West Bengal';
+  const text = 'Ananya Ghosh\nPhone: 7044361649\nEmail: 07ananyaghosh07@gmail.com\nAddress: Kolkata, West Bengal';
   navigator.clipboard.writeText(text).then(() => {
-    alert('Contact details copied to clipboard!\n\nPhone: 7044361649\nLocation: Sonarpur, Kolkata\nEmail: 07ananyaghosh07@gmail.com');
+    alert('Contact details copied to clipboard!\n\nPhone: 7044361649\nLocation: Kolkata, West Bengal\nEmail: 07ananyaghosh07@gmail.com');
   }).catch(() => {
-    alert('Phone: 7044361649\nLocation: Sonarpur, Kolkata\nEmail: 07ananyaghosh07@gmail.com');
+    alert('Phone: 7044361649\nLocation: Kolkata, West Bengal\nEmail: 07ananyaghosh07@gmail.com');
   });
 }
+
 
