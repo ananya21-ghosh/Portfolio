@@ -287,16 +287,19 @@
   </section>
 
   <!-- Restructured Skills Section -->
-  <section id="skills">
-    <div class="watermark-bg" aria-hidden="true">SKILLS</div>
-    <div class="section-header reveal-scroll">
+  <section id="skills" style="position: relative; overflow: hidden;">
+    <!-- Originkit Hero-24 Animated 3D Globe Background -->
+    <div id="hero24-globe-bg" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; opacity: 0.65; overflow: hidden;"></div>
+
+    <div class="watermark-bg" aria-hidden="true" style="z-index: 1;">SKILLS</div>
+    <div class="section-header reveal-scroll" style="position: relative; z-index: 1;">
       <div class="section-tag">// 04. TECHNICAL SKILLS</div>
       <h2 class="section-title">Technologies & Tools</h2>
       <p class="section-subtitle">Categorized technical languages, design tools, and software.</p>
     </div>
 
     <!-- Grouped Factual Skills Cards -->
-    <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;">
+    <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; position: relative; z-index: 1;">
       <!-- Group 1: FRONTEND & WEB -->
       <div class="glass-panel reveal-scroll" style="padding: 20px;">
         <div style="font-family: var(--font-code); font-size: 0.8rem; color: var(--accent-primary); margin-bottom: 10px; font-weight: 700;">💻 FRONTEND & WEB</div>
@@ -623,6 +626,7 @@
   </div>
 
   <!-- Scripts -->
+  <script src="components/originkit/hero24-globe-init.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
